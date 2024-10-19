@@ -2,13 +2,13 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 // Site title and description
-export const SITE_TAB = "原子之心乐队";
-export const SITE_TITLE = "原子之心乐队";
-export const SITE_DESCRIPTION = "原子之心乐队官方网站";
+export const SITE_TAB = "原子之星乐队";
+export const SITE_TITLE = "原子之星乐队";
+export const SITE_DESCRIPTION = "原子之星乐队官方网站";
 export const DATE_FORMAT = "ddd MMM DD YYYY";
 
 // User profile information
-export const USER_NAME = "原子之心";
+export const USER_NAME = "原子之星";
 export const USER_SITE = "http://112.124.33.59/articles/179"
 export const USER_AVATAR = "/profile.webp";
 
