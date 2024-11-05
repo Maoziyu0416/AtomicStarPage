@@ -49,7 +49,7 @@ export const menuItems = [
       }, // Life category
       {
         id: "music",
-        text: "生活",
+        text: "音乐",
         href: "/blog/categories/music",
         svg: "heart",
         target: "_self",
