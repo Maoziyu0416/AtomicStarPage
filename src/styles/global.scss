@@ -1,9 +1,16 @@
+@import "@fontsource/ma-shan-zheng/index.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 html {
   @apply scroll-smooth transition-colors;
+}
+
+body {
+  font-family: 'Ma Shan Zheng', cursive;
 }
 
 .no-card {
