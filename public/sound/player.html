@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Audio Player</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .player-container {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .player-container h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .audio-player {
+            width: 100%;
+            outline: none;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Audio control customization */
+        ::-webkit-media-controls-panel {
+            background-color: #333;
+        }
+        ::-webkit-media-controls-play-button,
+        ::-webkit-media-controls-mute-button,
+        ::-webkit-media-controls-timeline,
+        ::-webkit-media-controls-volume-slider {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="player-container">
+    <h2>Audio Player</h2>
+    <audio id="audioPlayer" class="audio-player" controls>
+        <source id="audioSource" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+<script>
+    // Function to get query parameter by name
+    function getQueryParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    // Set audio source based on URL parameter
+    const audioFileName = getQueryParam('audio');
+    if (audioFileName) {
+        document.getElementById('audioSource').src = `${audioFileName}`;
+        document.getElementById('audioPlayer').load();
+    } else {
+        document.querySelector('.player-container').innerHTML = "<p>Audio file not specified.</p>";
+    }
+</script>
+</body>
+</html>
