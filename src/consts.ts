@@ -13,7 +13,7 @@ export const USER_SITE = "http://112.124.33.59/articles/179"
 export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
-export const SERVER_URL = "https://demo.saroprock.com";
+export const SERVER_URL = "https://atomic-star-comment-maoziyu0416s-projects.vercel.app/";
 
 // Menu items for navigation
 export const menuItems = [
